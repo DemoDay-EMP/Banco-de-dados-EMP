@@ -8,5 +8,5 @@ Demostrando as principais tabelas e seus atributos e os relacionamento entre sí
 ![Modleo conceitual](https://github.com/DemoDay-EMP/Banco-de-dados-EMP/blob/main/IMG/EMP.Modelo_conceitual.jpg?raw=true)
 
 Modelo Lógico:
-Com o avançar da modelagem nesse modelo lógico é definido o tipo de cada atributo e estabelecido a restrição para prosseguimento do desenvolvimento do modelo físico.
+Com o avançar da modelagem nesse modelo lógico é definido os tipos de cada atributo e estabelecido a restrições para prosseguimento do desenvolvimento do modelo físico.
 ![Modelo_lógico](https://github.com/DemoDay-EMP/Banco-de-dados-EMP/blob/main/IMG/EMP_modelo_conceitual.jpeg?raw=true)
