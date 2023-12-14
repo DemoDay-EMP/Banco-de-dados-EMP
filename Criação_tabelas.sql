@@ -1,5 +1,4 @@
-create database if not exists EMP;
-
+CREATE DATABESE IF NOT EXISTS EMP;
 USE emp;
 CREATE TABLE IF NOT EXISTS CNPJ (
 id_cnpj int(4) auto_increment primary key not null,
@@ -26,7 +25,6 @@ id_cnpj INT(4) NOT NULL,
 foreign key (id_cnpj) references CNPJ (id_cnpj)
 );
 
-/*
 CREATE TABLE IF NOT EXISTS Usuario_pf (
 cpf varchar(11) primary key not null,
 nome_cliente varchar(200) not null,
@@ -39,34 +37,18 @@ senha varchar (40) not null,
 status_usuario boolean,
 data_cadastro date
 );
-*/
-CREATE TABLE IF NOT EXISTS Usuario_pf (
-cpf varchar(11) primary key,
-nome_cliente varchar(200),
-cnpj varchar(14),
-data_nascimento date,
-telefone varchar(14),
-cep int(8),
-email varchar(40),
-senha varchar (40),
-status_usuario boolean,
-data_cadastro date
-);
 
 CREATE TABLE IF NOT EXISTS Lancamento (
-id_lancamento int(4),
-data_lancamento datetime,
-descricao varchar (300),
-tipo_lancamento varchar(16),
-valor decimal (20),
-forma_pagamento varchar(16),
-numero_parcela int(2),
-status_lancamento varchar(45),
-observacao_lancamento varchar(200),
-id_cnpj INT(4),
-cpf varchar(11) not null,
-foreign key (id_cnpj) references CNPJ (id_cnpj),
-foreign key (cpf) references Usuario_pf(cpf)
+  id_lancamento int(4) primary key auto_increment,
+  valor decimal (20),
+  tipo_conta varchar(16),
+  data_lancamento datetime,
+  tipo_lancamento varchar(16),
+  cpf varchar(11) NOT NULL,
+  forma_pagamento varchar(16),
+  observacao varchar(200),
+  status_lancamento boolean,
+  foreign key (cpf) references Usuario_pf(cpf)
 );
 
 CREATE INDEX idx_id_lancamento ON Lancamento(id_lancamento);
