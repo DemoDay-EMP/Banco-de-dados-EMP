@@ -1,4 +1,6 @@
-CREATE DATABESE IF NOT EXISTS EMP;
+-- tabela alterado por mim (Estou usando esse código)
+drop database emp;
+create database if not exists EMP;
 USE emp;
 CREATE TABLE IF NOT EXISTS CNPJ (
 id_cnpj int(4) auto_increment primary key not null,
@@ -40,10 +42,10 @@ data_cadastro date
 
 CREATE TABLE IF NOT EXISTS Lancamento (
   id_lancamento int(4) primary key auto_increment,
-  valor decimal (20),
+  valor decimal (10, 2),
   tipo_conta varchar(16),
   data_lancamento datetime,
-  tipo_lancamento varchar(16),
+  tipo_lancamento varchar(40),
   cpf varchar(11) NOT NULL,
   forma_pagamento varchar(16),
   observacao varchar(200),
