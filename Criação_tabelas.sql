@@ -1,3 +1,5 @@
+-- tabela alterado por mim (Estou usando esse código)
+drop database emp;
 create database if not exists EMP;
 USE emp;
 CREATE TABLE IF NOT EXISTS CNPJ (
